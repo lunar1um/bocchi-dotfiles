@@ -1,0 +1,97 @@
+{
+	"reload_style_on_change": true,
+	"layer": "top",
+	"position": "bottom",
+	"height": 10,
+	"spacing": 8,
+	"margin-bottom": 15,
+	"margin-left": 300,
+	"margin-right": 300,
+	"modules-left": [
+		"group/tray",
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"pulseaudio/slider",
+		"battery",
+		"clock"
+	],
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "",
+			"7": "",
+			"8": "",
+			"9": "",
+			"10": ""
+		},
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		}
+	},
+	"clock": {
+		"tooltip": false,
+		"format": "{:%a, %b %d | %I:%M %p}"
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "󰁹 {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": "󰂄 {capacity}%",
+		"tooltip": false,
+		"format-full": "󰁹 {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"pulseaudio": {
+		"format": "",
+		"format-muted": "",
+		"tooltip": false,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol"
+	},
+	"pulseaudio/slider": {
+		"orientation": "horizontal"
+	},
+	"group/tray": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 200,
+			"transition-left-to-right": true,
+			"children-class": "tray"
+		},
+		"modules": [
+			"custom/arch",
+			"tray"
+		]
+	},
+	"tray": {
+		"spacing": 10,
+		"icon-size": 19
+	},
+	"custom/arch": {
+		"tooltip": true,
+		"tooltip-format": "i use arch btw",
+		"format": "󰣇"
+	}
+}

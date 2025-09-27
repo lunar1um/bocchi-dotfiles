@@ -1,0 +1,169 @@
+@define-color bg #1a1b26;
+@define-color bg-alt #24283b;
+@define-color fg #c0caf5;
+@define-color fg-alt #a9b1d6;
+@define-color blue #7aa2f7;
+@define-color purple #bb9af7;
+@define-color cyan #7dcfff;
+@define-color green #9ece6a;
+@define-color orange #ff9e64;
+@define-color red #f7768e;
+@define-color yellow #e0af68;
+@define-color comment #565f89;
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "SF Pro Display", monospace;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(26, 27, 38, 0.8);
+  border-radius: 10px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  color: @fg;
+}
+
+tooltip {
+  background: @bg-alt;
+  border-radius: 8px;
+  border: 1px solid @comment;
+}
+
+tooltip label {
+  color: @fg;
+  font-size: 17px;
+}
+
+#custom-arch {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 19px;
+  background: transparent;
+  color: @fg;
+}
+
+#tray {
+  background: transparent;
+  padding-left: 15px;
+  border-radius: 20px;
+}
+
+/* workspaces */
+#workspaces {
+  background: transparent;
+  padding: 0px 5px;
+}
+
+#workspaces button {
+  font-size: 2px;
+  background: transparent;
+  color: transparent;
+  border: none;
+  margin: 15px 6px;
+  padding: 5px 7px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 0;
+}
+
+/* inactive workspaces */
+#workspaces button:not(.active):not(:hover) {
+  background: @comment;
+  border-radius: 50%;
+}
+
+/* active workspace */
+#workspaces button.active {
+  background: @blue;
+  min-width: 25px;
+  border-radius: 8px;
+}
+
+/* hovered workspace */
+#workspaces button:hover:not(.active) {
+  background: @purple;
+  min-width: 20px;
+  border-radius: 8px;
+}
+
+/* urgent workspace */
+#workspaces button.urgent {
+  background: @red;
+  animation: blink 1s linear infinite alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: @bg;
+    color: @red;
+  }
+}
+
+#clock {
+  color: @fg;
+  background: transparent;
+  padding: 0 16px;
+  padding-left: 5px;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+}
+
+#battery,
+#network,
+#pulseaudio,
+#pulseaudio-slider {
+  background: transparent;
+  color: @fg;
+  padding: 0 6px;
+  margin: 0 2px;
+  font-size: 18px;
+}
+
+#pulseaudio-slider {
+  padding-left: 5px;
+  min-height: 8px;
+}
+
+#pulseaudio {
+  font-size: 16px;
+}
+
+#pulseaudio.muted {
+  color: @comment;
+}
+
+#pulseaudio-slider slider {
+  min-height: 0;
+  min-width: 0;
+  opacity: 0;
+  background: @fg;
+  border: none;
+  border-radius: 30%;
+  box-shadow: none;
+}
+
+#pulseaudio-slider slider:hover {
+  background: @fg-alt;
+}
+
+#pulseaudio-slider highlight {
+  background: @blue;
+  border: none;
+  border-radius: 10px;
+  min-height: 10px;
+}
+
+#pulseaudio-slider trough {
+  min-width: 100px;
+  min-height: 10px;
+  border-radius: 10px;
+  background: @bg-alt;
+  border: none;
+}
+
+#battery {
+  color: @fg;
+}

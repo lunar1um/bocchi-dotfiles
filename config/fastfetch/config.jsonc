@@ -1,0 +1,85 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "format": "         👋 welcome, {#blue}lunaris{#}!"
+    },
+    {
+      "type": "custom",
+      "format": "╭──────────── {#magenta}system info{#} ────────────╮"
+    },
+    {
+      "type": "os",
+      "key": "   os     ",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "kernel",
+      "key": "   kernel ",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "wm",
+      "key": "   wm     ",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "custom",
+      "format": "╰─────────────────────────────────────╯"
+    },
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "paddingLeft": 12
+    },
+    {
+      "type": "custom",
+      "format": "╭───────────── {#green}other info{#} ────────────╮"
+    },
+    {
+      "type": "uptime",
+      "key": "   uptime ",
+      "keyColor": "green"
+    },
+    {
+      "type": "packages",
+      "key": "   pkgs   ",
+      "keyColor": "green"
+    },
+    {
+      "type": "shell",
+      "key": "   shell  ",
+      "keyColor": "green"
+    },
+    {
+      "type": "terminal",
+      "key": "   term   ",
+      "keyColor": "green"
+    },
+    {
+      "type": "theme",
+      "key": "   theme  ",
+      "keyColor": "green"
+    },
+    {
+      "type": "custom",
+      "format": "╰─────────────────────────────────────╯"
+    },
+    {
+      "type": "custom",
+      "format": "       ⚡ energy: {#yellow}███{#black}░░░░░░{#} {#dim_}30%{#}"
+    }
+  ],
+  "display": {
+    "color": "blue",
+    "separator": " ",
+    "disableLinewrap": true
+  },
+  "logo": {
+    "type": "auto",
+    "source": "/home/lunaris/.config/fastfetch/images/bocchi.png",
+    "width": 30
+  }
+}

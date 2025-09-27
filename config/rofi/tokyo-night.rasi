@@ -1,0 +1,195 @@
+configuration {
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Windows";
+    display-ssh: "SSH";
+    show-icons: true;
+    icon-theme: "Papirus";
+    font: "Hurmit Nerd Font Mono 12.5";
+    modi: "drun,run,window,ssh";
+}
+
+* {
+    bg: #1a1b26;
+    bg-alt: #24283b;
+    bg-selected: #414868;
+    fg: #c0caf5;
+    fg-alt: #7aa2f7;
+    border: #7aa2f7;
+    urgent: #f7768e;
+    active: #9ece6a;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    background-color: #1a1b26cc;
+    border: 4px;
+    border-color: rgba(41, 41, 41, 0.1);
+    border-radius: 10px;
+    width: 600px;
+    location: center;
+    anchor: center;
+    x-offset: 0;
+    y-offset: 0;
+}
+
+prompt {
+    enabled: true;
+    padding: 8px 12px;
+    background-color: #24283baa;
+    text-color: @fg-alt;
+    border-radius: 5px;
+    margin: 0px 8px 0px 0px;
+}
+
+textbox-prompt-sep {
+    expand: false;
+    str: "";
+}
+
+entry {
+    background-color: #24283baa;
+    text-color: @fg;
+    placeholder-color: @fg-alt;
+    expand: true;
+    horizontal-align: 0;
+    placeholder: "Search...";
+    padding: 8px 12px;
+    border-radius: 5px;
+    blink: true;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: transparent;
+    text-color: @fg;
+    expand: false;
+    border-radius: 6px;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+    spacing: 5px;
+    padding: 10px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+    spacing: 10px;
+    padding: 20px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    orientation: horizontal;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 24px;
+    cursor: inherit;
+    margin: 0px 8px 0px 0px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    expand: true;
+    horizontal-align: 0;
+    vertical-align: 0.5;
+    cursor: inherit;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.urgent {
+    background-color: @urgent;
+    text-color: @bg;
+}
+
+element normal.active {
+    background-color: @active;
+    text-color: @bg;
+}
+
+element selected.normal {
+    background-color: #414868aa;
+    text-color: @fg;
+    border: 0px 0px 0px 4px;
+    border-color: #7aa2f7aa;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @bg;
+}
+
+element selected.active {
+    background-color: @active;
+    text-color: @bg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element alternate.urgent {
+    background-color: transparent;
+    text-color: @urgent;
+}
+
+element alternate.active {
+    background-color: transparent;
+    text-color: @active;
+}
+
+message {
+    background-color: #24283baa;
+    margin: 20px 0px 0px 0px;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+textbox {
+    text-color: @fg;
+    padding: 8px;
+}
+
+mode-switcher {
+    enabled: true;
+    spacing: 10px;
+    margin: 10px 0px 0px 0px;
+    background-color: transparent;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #24283baa;
+    text-color: @fg-alt;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    border-radius: 6px;
+}
+
+button selected {
+    background-color: @bg-selected;
+    text-color: @fg;
+}
