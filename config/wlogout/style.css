@@ -1,0 +1,53 @@
+* {
+	background-image: none;
+	box-shadow: none;
+	font-family: 'Hurmit Nerd Font Mono';
+	font-size: 14pt;
+}
+
+window {
+	background-color: rgba(10, 12, 27, 0.5);
+}
+
+button {
+    border-radius: 15px;
+    border-color: rgba(0, 0, 0, 0.393);
+	text-decoration-color: #7aa2f7;
+    color: #7aa2f7;
+	background-color: rgba(22, 22, 29, 0.7);
+	border-style: solid;
+	border-width: 6px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30%;
+	margin: 15px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+button:focus, button:active, button:hover {
+	background-color: rgba(54, 54, 70, 0.7);
+	outline-style: none;
+	border-color: rgba(126, 156, 216, 0.6);
+	background-size: 35%;
+}
+
+#lock {
+    background-image: image(url("/home/lunaris/.config/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/home/lunaris/.config/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/lunaris/.config/wlogout/icons/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(url("/home/lunaris/.config/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/lunaris/.config/wlogout/icons/reboot.png"));
+}

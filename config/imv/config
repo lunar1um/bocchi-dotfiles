@@ -1,0 +1,15 @@
+# styling
+[options]
+background = #1a1b26
+fullscreen = false
+overlay = true
+overlay_text_color = #9aa5ce
+overlay_background_color = #1a1b26
+overlay_background_alpha = aa
+overlay_font = monospace:15
+overlay_position_bottom = true
+
+# bindings
+[binds]
+j = next
+k = prev
